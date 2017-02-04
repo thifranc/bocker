@@ -1,0 +1,19 @@
+Rendre vos fichiers pour la soutenance dans le dossier mission02. Vous devez rendre
+le Dockerfile et les fichers ajoutés à l’exécution du build de l’image (autant que besoin
+pour l’accomplissement de la mission).
+
+Au build du container, OpenSSH sera configuré automatiquement sur le port 42 (interne
+au container). ----> expose 42
+Votre clé SSH PUBLIQUE (ne donner jamais votre clé PRIVEE) sera pré-
+configurée dans le répertoire home/login/.ssh/authorized_keys du container pour
+accepter les connexions provenant de votre clé privée ; ainsi vous pourrez vous connecter
+au container. ------> COPY
+À la soutenance, votre correcteur devra build votre Dockerfile et lancer votre container
+en mode daemon et se connecter directemenr dans le container avec la commande
+suivante : -> lancer en mode daemon ?? -d option in docker run 
+
+docker run -d --name conteneur_name -i -t -p hostPort:conteneurPort image_name
+
+ssh login@IPContainer -p [yyyy] #ou
+ssh login@localhost -p [yyyy] #(si vous trouvez comment faire)
+où [yyyy] est le port fourni par Docker pour accéder au container (docker ps).

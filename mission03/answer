@@ -1,0 +1,1 @@
+docker run -d --name lol -v ~/path:/database myboy
