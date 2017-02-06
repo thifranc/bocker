@@ -7,4 +7,4 @@ RUN mkdir /var/run/sshd
 EXPOSE 22
 COPY ./id_rsa.pub /root/.ssh/authorized_keys
 #CMD service ssh start && while true; do sleep 3000; done
-CMD ["/usr/sbin/sshd", "-D"]
+CMD ["/usr/sbin/sshd", "-D", "-E", "/root/logFile", "-p", "42"]
