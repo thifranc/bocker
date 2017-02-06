@@ -1,1 +1,2 @@
-docker run -d --name lol -v ~/path:/database myboy
+docker build . -t volume
+docker run -d --name volume_run -v ~/sharedVolume:/database volume

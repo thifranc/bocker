@@ -1,0 +1,2 @@
+docker build . -t ssh
+docker run -d --name ssh_run -i -t -p 42:42 ssh

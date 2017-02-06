@@ -1,0 +1,2 @@
+docker build . -t website
+docker run -d --name website_run -i -t -p 1234:1234 website
